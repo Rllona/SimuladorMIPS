@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane prefHeight="720.0" prefWidth="1000.0" vbarPolicy="ALWAYS">
+         <content>
+            <Pane prefHeight="2850.0" prefWidth="980.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="15.0" text="Manual de la aplicación">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="50.0" prefHeight="30.0" prefWidth="91.0" text="Botones:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="87.0" layoutX="25.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../playIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="81.0" layoutY="89.0" prefHeight="21.0" prefWidth="301.0" text="Ejecución del código entero" />
+                  <ImageView fitHeight="38.0" fitWidth="87.0" layoutX="25.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../playCicleIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="81.0" layoutY="149.0" prefHeight="21.0" prefWidth="301.0" text="Ejecución del código ciclo a ciclo" />
+                  <ImageView fitHeight="38.0" fitWidth="87.0" layoutX="25.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../CrossIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="81.0" layoutY="209.0" prefHeight="21.0" prefWidth="301.0" text="Cancelar ejecución y limpieza del entorno" />
+                  <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="32.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ScreenshotIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="81.0" layoutY="269.0" prefHeight="21.0" prefWidth="337.0" text="Guardar imagen del diagrama de ciclos generado" />
+                  <Label layoutX="15.0" layoutY="1250.0" text="Características del procesador MIPS simulado">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <Label layoutX="25.0" layoutY="1291.0" prefHeight="50.0" prefWidth="930.0" text="El procesador MIPS simulado se trata de un procesador multiciclo segmentado, el cual divide cada instrucción en las etapas de Fetch (IF), Decode (ID), Execution (EX), Memory (MEM) y Write Back (WB)." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="25.0" layoutY="1352.0" prefHeight="30.0" prefWidth="195.0" text="Detección de riesgos:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="1382.0" prefHeight="50.0" prefWidth="920.0" text="Los riesgos de datos y estructurales de acceso a las unidades de operaciones de coma flotante son detectados en la etapa Decode (ID)." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="1437.0" prefHeight="50.0" prefWidth="920.0" text="Los riesgos estructurales de acceso a la memoria son detectados en la etapa Execution (EX). En el caso de las unidades de operaciones de coma flotante, son detectados en el último ciclo de la operación." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="25.0" layoutY="1500.0" prefHeight="30.0" prefWidth="195.0" text="Gestión de saltos:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="1530.0" prefHeight="25.0" prefWidth="920.0" text="Con la predicción de saltos desactivada, las instrucciones de salto son resueltas en la etapa Decode (ID), introduciendo un ciclo de parada." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="1555.0" prefHeight="50.0" prefWidth="920.0" text="Con predicción de salto no tomado, las instrucciones de salto son resueltas en la etapa Decode (ID), comenzando la ejecución de la instrucción inmediatamente posterior. En caso de que el salto finalmente se tome, se cancela la ejecución de la instrucción introducida." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="1605.0" prefHeight="75.0" prefWidth="920.0" text="Con predicciones de salto bajo estados de 1 o 2 bits, las instrucciones de salto son resueltas en la etapa Decode (ID), comenzando la ejecución de la instrucción que el predictor marque. En el caso de que el predictor falle, se cancela la ejecución de la instrucción introducida. Por defecto, el predictor de salto de 1 bit viene inicializado como 0 y el de 2 bits como 01." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="25.0" layoutY="1690.0" prefHeight="30.0" prefWidth="527.0" text="Segmentación de unidades de operaciones de coma flotante:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="1720.0" prefHeight="50.0" prefWidth="920.0" text="Al habilitar la opción de segmentación, el sumador/restador de coma flotante, el multiplicador y el divisor pasan a estar segmentados internamente. De tal manera que pueden ejecutarse varias operaciones del mismo tipo simultáneamente." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="15.0" layoutY="1810.0" text="Listado de instrucciones soportadas">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="1850.0" prefHeight="30.0" prefWidth="349.0" text="Instrucciones de tipo Aritmético-Lógico:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="1880.0" prefHeight="25.0" prefWidth="75.0" text="- add" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="1880.0" prefHeight="25.0" prefWidth="785.0" text="Suma de registros de enteros" textAlignment="RIGHT" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="1905.0" prefHeight="25.0" prefWidth="75.0" text="- sub" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="1905.0" prefHeight="25.0" prefWidth="785.0" text="Resta de registros de enteros" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="1930.0" prefHeight="25.0" prefWidth="75.0" text="- addi" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="1930.0" prefHeight="25.0" prefWidth="785.0" text="Suma de un registro entero y un inmediato" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="1980.0" prefHeight="25.0" prefWidth="75.0" text="- and" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="1980.0" prefHeight="25.0" prefWidth="785.0" text="Operación AND lógica de registros enteros" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2005.0" prefHeight="25.0" prefWidth="75.0" text="- or" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2005.0" prefHeight="25.0" prefWidth="785.0" text="Operación OR lógica de registros enteros" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2030.0" prefHeight="25.0" prefWidth="75.0" text="- xor" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2030.0" prefHeight="25.0" prefWidth="785.0" text="Operación XOR lógica de registros enteros" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2055.0" prefHeight="25.0" prefWidth="75.0" text="- nor" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2055.0" prefHeight="25.0" prefWidth="785.0" text="Operación NOR lógica de registros enteros" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2105.0" prefHeight="25.0" prefWidth="75.0" text="- add.d" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2105.0" prefHeight="25.0" prefWidth="785.0" text="Suma de registros de coma flotante" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2130.0" prefHeight="25.0" prefWidth="75.0" text="- sub.d" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2130.0" prefHeight="25.0" prefWidth="785.0" text="Resta de registros de coma flotante" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2155.0" prefHeight="25.0" prefWidth="75.0" text="- mul.d" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2155.0" prefHeight="25.0" prefWidth="785.0" text="Multiplicación de registros de coma flotante" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2180.0" prefHeight="25.0" prefWidth="75.0" text="- div.d" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2180.0" prefHeight="25.0" prefWidth="785.0" text="División de registros de coma flotante" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="25.0" layoutY="2215.0" prefHeight="30.0" prefWidth="313.0" text="Instrucciones de tipo Memoria:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="2245.0" prefHeight="25.0" prefWidth="75.0" text="- lw" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2245.0" prefHeight="25.0" prefWidth="785.0" text="Carga de memoria de una palabra (32 bits) en un registro entero" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2270.0" prefHeight="25.0" prefWidth="75.0" text="- sw" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2270.0" prefHeight="25.0" prefWidth="785.0" text="Guardado de un registro entero en memoria como una palabra (32 bits)" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2295.0" prefHeight="25.0" prefWidth="75.0" text="- lb" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2295.0" prefHeight="25.0" prefWidth="785.0" text="Carga de memoria de un byte (8 bits) en un registro entero" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2320.0" prefHeight="25.0" prefWidth="75.0" text="- sb" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2320.0" prefHeight="25.0" prefWidth="785.0" text="Guardado de un registro entero en memoria como un byte (8 bits)" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2345.0" prefHeight="25.0" prefWidth="75.0" text="- lh" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2345.0" prefHeight="25.0" prefWidth="785.0" text="Carga de memoria de media palabra (16 bits) en un registro entero" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2370.0" prefHeight="25.0" prefWidth="75.0" text="- sh" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2370.0" prefHeight="25.0" prefWidth="785.0" text="Guardado de un registro entero en memoria como media palabra (16 bits)" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2395.0" prefHeight="25.0" prefWidth="75.0" text="- ld" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2395.0" prefHeight="25.0" prefWidth="785.0" text="Carga de memoria de una palabra doble (64 bits) en un registro entero" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2470.0" prefHeight="25.0" prefWidth="75.0" text="- l.d" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2470.0" prefHeight="25.0" prefWidth="785.0" text="Carga de memoria de una palabra (32 bits) en un registro de coma flotante" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2495.0" prefHeight="25.0" prefWidth="75.0" text="- s.d" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2495.0" prefHeight="25.0" prefWidth="785.0" text="Guardado de un registro de coma flotante en memoria como una palabra (32 bits)" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2420.0" prefHeight="25.0" prefWidth="75.0" text="- sd" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2420.0" prefHeight="25.0" prefWidth="785.0" text="Guardado de un registro entero en memoria como una palabra doble (64 bits)" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="25.0" layoutY="2530.0" prefHeight="30.0" prefWidth="313.0" text="Instrucciones de tipo Salto:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="2560.0" prefHeight="25.0" prefWidth="75.0" text="- j" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2560.0" prefHeight="25.0" prefWidth="785.0" text="Salto incondicional a una etiqueta" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="33.0" layoutY="2585.0" prefHeight="25.0" prefWidth="75.0" text="- beq" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2585.0" prefHeight="25.0" prefWidth="785.0" text="Salto a una etiqueta bajo condición si los valores de los registros enteros son iguales" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="2610.0" prefHeight="25.0" prefWidth="75.0" text="- bne" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="2610.0" prefHeight="25.0" prefWidth="785.0" text="Salto a una etiqueta bajo condición si los valores de los registros enteros no son iguales" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="1955.0" prefHeight="25.0" prefWidth="75.0" text="- li" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="1955.0" prefHeight="25.0" prefWidth="810.0" text="Carga de un inmediato a un registro entero (pseudo-instrucción que se transforma a addi del registro R0 y el inmediato)" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="15.0" layoutY="2690.0" text="Advertencia">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="320.0" prefHeight="30.0" prefWidth="196.0" text="Formato del código:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="350.0" prefHeight="50.0" prefWidth="920.0" text="La sección de código debe seguir un formato correcto de lenguaje ensamblador para el correcto funcionamiento de la simulación. El código debe estar dividido en 2 secciones (.data y .text/.code)." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="450.0" prefHeight="50.0" prefWidth="920.0" text="Esta sección es opcional, sirve para introducir datos y variables en la memoria. La memoria tiene una capacidad de 1024 palabras de 32 bits, siendo la dirección de acceso a cada palabra múltiplo de 4. Se aceptan las siguientes directivas:" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="425.0" prefHeight="25.0" prefWidth="337.0" text="- Sección .data:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="500.0" prefHeight="25.0" prefWidth="119.0" text="  .word/.word32" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="500.0" prefHeight="25.0" prefWidth="733.0" text="Introduce números de 32 bit" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="525.0" prefHeight="25.0" prefWidth="119.0" text="  .float" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="525.0" prefHeight="25.0" prefWidth="733.0" text="Introduce números de coma flotante de 32 bit" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="550.0" prefHeight="25.0" prefWidth="119.0" text="  .word16" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="550.0" prefHeight="25.0" prefWidth="733.0" text="Introduce números de 16 bit" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="575.0" prefHeight="25.0" prefWidth="119.0" text="  .byte" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="575.0" prefHeight="25.0" prefWidth="733.0" text="Introduce números de 8 bit" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="600.0" prefHeight="25.0" prefWidth="119.0" text="  .double" textAlignment="JUSTIFY" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="600.0" prefHeight="25.0" prefWidth="733.0" text="Introduce números de 64 bit" textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="625.0" prefHeight="100.0" prefWidth="920.0" text="Tras la declaración de una directiva se pueden introducir los números que se deseen, separados por comas y en la misma línea. Se aceptan tanto números decimales como hexadecimales precedidos por 0x. Para introducir variables de memoria, se deben declarar seguidas de dos puntos, la directiva deseada y su valor (nombreVariable: .word XXX). Las variables de memoria guardan la dirección de memoria del valor introducido." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="775.0" prefHeight="75.0" prefWidth="920.0" text="Esta sección es obligatoria, contiene la secuencia de instrucciones a ejecutar en lenguaje ensamblador. El procesador simulado contiene 32 registros enteros accesibles de la forma r0-r31 o R0-R31, y 32 registros de coma flotante accesibles de la forma f0-f31 o F0-F31. La sección no debe contener errores sintácticos, de lo contrario la ejecución no será completada o tendrá fallos." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="35.0" layoutY="750.0" prefHeight="25.0" prefWidth="337.0" text="- Sección .text/.code:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="875.0" prefHeight="25.0" prefWidth="337.0" text="- Código de ejemplo:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextArea editable="false" focusTraversable="false" layoutX="35.0" layoutY="910.0" prefHeight="300.0" prefWidth="920.0" text=".data&#10;A: .word 10, 0x0a2df36b&#10;B: .float 2.25&#10;.byte 0xf1, 0xf2&#10;&#10;.text&#10;       lw R1, A(R0)&#10;       l.d F1, B(R0)&#10;       li R2, 15&#10;loop:  addi R1, R1, 1&#10;       bne R1, R2, loop&#10;       mul.d F2, F1, F1&#10;       s.d F2, B(R0)">
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="25.0" layoutY="2725.0" prefHeight="50.0" prefWidth="930.0" text="Esta aplicación ha sido desarrollada para un trabajo de fin de grado de la Universidad Rey Juan Carlos. No es un proyecto realizado por un equipo profesional, la aplicación puede contener errores o calcular equivocadamente ciertas combinaciones de instrucciones." textAlignment="JUSTIFY" wrapText="true" />
+                  <Label layoutX="25.0" layoutY="2795.0" prefHeight="50.0" prefWidth="930.0" text="Creado por Raúl Llona Cabeza - Estudiante del Grado en Ingeniería de Computadores, ETSII, URJC 2024." textAlignment="JUSTIFY" textFill="#7c7c7c" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
